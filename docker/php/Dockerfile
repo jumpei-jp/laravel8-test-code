@@ -11,8 +11,8 @@ git \
 unzip
 
 # ドキュメントルートをpublic配下に指定
-#ENV APACHE_DOCUMENT_ROOT /var/www/html/{プロジェクト名}/public #プロジェクト名を入力してコメントアウトを消す
-#ENV APACHE_DOCUMENT_ROOT /var/www/html/{プロジェクト名}/public
+ENV APACHE_DOCUMENT_ROOT /var/www/html/laraveltestcode/public #プロジェクト名を入力してコメントアウトを消す
+ENV APACHE_DOCUMENT_ROOT /var/www/html/laraveltestcode/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 

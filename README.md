@@ -28,10 +28,10 @@ imageをdockerhub等から入手すると良いが、
     docker-compose up
 
     #コンテナにログイン
-    docker exec -it {コンテナ名} bash
+    docker exec -it php_Laravel bash
 
     #Laravelのインストール（初期操作以外は必要無し）
-    composer create-project laravel/laravel {プロジェクト名} "8.*"
+    composer create-project laravel/laravel laraveltestcode "8.*"
 
     #このままだとアクセスできないので権限を変更
     chmod 777 -R storage/
@@ -39,7 +39,7 @@ imageをdockerhub等から入手すると良いが、
 ## 各サービスログインコマンド
 
     php
-    docker exec -it {コンテナ名} bash
+    docker exec -it php_Laravel bash
 
     mysql
-    docker exec -it {コンテナ名} mysql -u root -p
+    docker exec -it php_mysql mysql -u root -p
